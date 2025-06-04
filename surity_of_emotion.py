@@ -44,8 +44,8 @@ def get_certainty_label(hold_time, grip_strength, gsr):
     return certainty_label, certainty_score
 
 # Example inputs from Z-mouse
-example_hold_time = 32        # seconds
-example_grip_strength = 65    # strong grip
+example_hold_time = 60        # seconds
+example_grip_strength = 100    # strong grip
 example_gsr = 0.2             # dry hand
 
 # Run certainty evaluator

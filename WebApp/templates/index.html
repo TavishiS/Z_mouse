@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circumplex Emotion Meter</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Circumplex Emotion Meter</h1>
+      <p class="subtitle">Based on Russell's Circumplex Model of Affect</p>
+    </header>
+    
+    <main>
+      <div class="meter-container">
+        <canvas id="emotionCanvas" width="600" height="600"></canvas>
+        <div class="center-circle"></div>
+      </div>
+      
+      <div class="controls">
+        <div id="info" class="result-display">
+          <div class="result-header">Your Emotional State:</div>
+          <div id="emotion-display" class="emotion-result">-</div>
+          <div id="certainty-display" class="certainty-result">-</div>
+        </div>
+        
+        <div class="instructions">
+          <h3>How to use:</h3>
+          <ol>
+            <ul>Move the mouse to rotate the needle</ul>
+            <ul>Click and hold to select an emotion</ul>
+            <ul>Hold longer for higher certainty</ul>
+          </ol>
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      <p>Based on Russell, J. A. (1980). A Circumplex Model of Affect. <em>Journal of Personality and Social Psychology</em></p>
+    </footer>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
